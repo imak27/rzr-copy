@@ -15,7 +15,7 @@ public class PaymentController {
 
     @RequestMapping("/")
     public String homepage() {
-        System.out.println("Request for home page . Thank you again");
+        System.out.println("Request for home page . Thank you again 111");
         return "home"; // Assuming payment.html is located in resources/templates directory
     }
 
