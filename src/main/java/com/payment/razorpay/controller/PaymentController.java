@@ -15,7 +15,7 @@ public class PaymentController {
 
     @RequestMapping("/")
     public String homepage() {
-        System.out.println("Request for home page");
+        System.out.println("Request for home page . Thank you");
         return "home"; // Assuming payment.html is located in resources/templates directory
     }
 
@@ -40,12 +40,11 @@ public class PaymentController {
         var client = new RazorpayClient("rzp_test_pD20lLR7U73r0J", "lqa9CxNDAGl1TS6V8XhSoxET");
 
         JSONObject ob = new JSONObject();
-        ob.put("amount", amt*100);
+        ob.put("amount", amt * 100);
         ob.put("currency", "INR");
         ob.put("receipt", "receipt#1");
 
-
-        //creating order
+        // creating order
         Order order = client.orders.create(ob);
         System.out.println(order);
 
